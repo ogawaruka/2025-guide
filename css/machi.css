@@ -1,0 +1,127 @@
+/* ヘッダーエリア */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1020px;
+  margin: 24px auto 0;
+  padding: 0 16px;
+}
+
+.site-title {
+  font-size: 20px;
+  margin: 0;
+  color: #2c2c2c;
+  text-align: left;
+  flex: 1;
+  font-weight: 400; /* ← 追加：通常の太さ（中程度） */
+}
+
+.close-button {
+  font-size: 24px;
+  text-decoration: none;
+  color: #666;
+  padding: 8px;
+  border-radius: 50%; /* ←円形にする */
+  transition: background-color 0.2s, color 0.2s;
+  display: inline-flex; /* 中央に配置するため */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* ボタンの幅 */
+  height: 40px; /* ボタンの高さ */
+}
+
+.close-button:hover {
+  background-color: #eee; /* 黒い背景 */
+  color: #fff; /* ×の色を白にして見やすく */
+}
+
+
+/* 写真ギャラリー全体 */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 50px 16px;
+  background-color: #fff;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+/* 各写真ブロック */
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: box-shadow 0.3s ease;
+}
+
+.photo-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 写真 */
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ホバー時の情報表示 */
+.photo-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 16px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .photo-info {
+  opacity: 1;
+}
+
+.photo-info h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.photo-info p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+  .page-header {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .site-title {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .close-button {
+    align-self: flex-end;
+    font-size: 20px;
+  }
+
+  .photo-item:active .photo-info {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,178 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダーエリア */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1020px;
+  margin: 24px auto 0;
+  padding: 0 16px;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: 400; /* 中程度（machi/foodと統一） */
+  margin: 0;
+  color: #2c2c2c;
+  text-align: left;
+  flex: 1;
+}
+
+/* ×ボタン */
+.close-button {
+  font-size: 24px;
+  text-decoration: none;
+  color: #666;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  line-height: 1;
+}
+
+.close-button:hover {
+  background-color: #eee;
+  color: #fff;
+}
+
+/* モバイル対応：ヘッダー縦並び */
+@media screen and (max-width: 768px) {
+  .page-header {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .site-title {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .close-button {
+    align-self: flex-end;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* セクション全体 */
+.nature-spot {
+  max-width: 1020px;
+  margin: 80px auto;
+  padding: 0 16px;
+}
+
+/* 画像エリア */
+.image-area {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  align-items: stretch;
+}
+
+/* メイン画像 */
+.main-image-container {
+  width: 819px;
+  height: 500px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.main-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* サムネイル列 */
+.thumbnail-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.thumbnail {
+  width: 171px;
+  height: 120px;
+  aspect-ratio: 171 / 128;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s ease;
+}
+
+.thumbnail:hover {
+  border: 2px solid #FFD700;
+}
+
+/* テキスト情報 */
+.spot-info {
+  margin-top: 16px;
+  max-width: 1020px;
+  width: 100%;
+}
+
+.spot-name {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.spot-address {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 16px;
+}
+
+.spot-description {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* モバイル対応：画像縦並び */
+@media screen and (max-width: 768px) {
+  .image-area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1019.794 / 620.797;
+  }
+
+  .thumbnail-column {
+    flex-direction: row;
+    height: auto;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: auto;
+  }
+
+  .spot-info {
+    padding: 0 8px;
+  }
+}

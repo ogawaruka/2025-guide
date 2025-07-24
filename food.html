@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>食べる｜おいしいって、安心できること</title>
+  <link rel="stylesheet" href="css/food.css" />
+</head>
+<body>
+
+  <header class="page-header">
+    <h1 class="site-title">食べる｜おいしいって、安心できること</h1>
+    <a href="javascript:history.back()" class="close-button">×</a>
+
+  </header>
+
+  <!-- 1. 夏みかん -->
+  <section class="food-section">
+    <div class="slider" data-slider="mikan">
+      <button class="arrow left" onclick="prevSlide('mikan')">&#10094;</button>
+      <img src="img/食.jpg" alt="夏みかん" class="slide-image" id="mikan-slide">
+      <button class="arrow right" onclick="nextSlide('mikan')">&#10095;</button>
+    </div>
+    <h2 class="food-title">夏みかん</h2>
+    <p class="food-description">山口の名産として知られる夏みかんは、爽やかな酸味と厚みのある皮が特徴です。その存在感は食卓だけでなく、街の風景にも表れており、山口県のガードレールは夏みかんをイメージした鮮やかな黄色に塗られています。さらに、冬には「みかん鍋」というユニークな料理にも活用されており、丸ごとのみかんが入った鍋は、見た目のインパクトと意外な美味しさで地元でも親しまれています。</p>
+  </section>
+
+  <!-- 2. 瓦そば -->
+<section class="food-section">
+  <div class="slider" data-slider="kawara">
+    <button class="arrow left" onclick="prevSlide('kawara')">&#10094;</button>
+    <img src="img/瓦そば2.jpg" alt="瓦そば" class="slide-image" id="kawara-slide">
+    <button class="arrow right" onclick="nextSlide('kawara')">&#10095;</button>
+  </div>
+  <h2 class="food-title">瓦そば</h2>
+  <p class="food-description">「瓦そば」は、熱した瓦の上で茶そばを焼いて食べる、山口県下関市発祥の郷土料理です。パリッと焼かれたそばの香ばしさと、甘辛いつゆの絶妙なハーモニーが魅力で、見た目にもインパクトのある一品です。家庭でもホットプレートなどで楽しめることから、県内外で人気を集めています。ご当地グルメとしての存在感も大きく、旅先の楽しみのひとつになっています。</p>
+</section>
+
+
+  <!-- 3. ふく -->
+  <section class="food-section">
+    <div class="slider" data-slider="fugu">
+      <button class="arrow left" onclick="prevSlide('fugu')">&#10094;</button>
+      <img src="img/ふく.jpg" alt="ふく" class="slide-image" id="fugu-slide">
+      <button class="arrow right" onclick="nextSlide('fugu')">&#10095;</button>
+    </div>
+    <h2 class="food-title">フグ</h2>
+    <p class="food-description">山口県ではフグのことを縁起を担いで「ふく（福）」と呼び、特別な存在として親しまれています。下関市は全国有数のフグの取扱量を誇り、ふく刺し、ふく鍋、唐揚げなど、多彩な料理で味わうことができます。また、フグは山口の“マスコット”的存在でもあり、駅や商店街、マンホールのふたなど、街のあちこちでその姿を見かけることができます。文化と生活に溶け込んだ魚、それが山口の「ふく」です。</p>
+  </section>
+
+  <script src="js/slider.js"></script>
+</body>
+</html>

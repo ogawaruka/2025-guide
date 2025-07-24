@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>まちを歩く｜はじめての山口</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/machi.css" />
+</head>
+<body>
+
+  <header class="page-header">
+    <h1 class="site-title">まちを歩く｜どこか懐かしい景色に出会う</h1>
+    <a href="javascript:history.back()" class="close-button">×</a>
+
+  </header>
+
+  <!-- 写真ギャラリー -->
+  <section class="photo-gallery">
+    <div class="photo-item">
+      <img src="img/まち1.jpg" alt="あくびねこ">
+      <div class="photo-info">
+        <h3>魚屋さんの近くのねこ</h3>
+        <p>でかめのあくび</p>
+      </div>
+    </div>
+    
+    <div class="photo-item">
+      <img src="img/まち2.jpg" alt="おばあちゃん">
+      <div class="photo-info">
+        <h3>灯台からのおばあちゃん</h3>
+        <p>ちいさい</p>
+      </div>
+    </div>
+
+    <div class="photo-item">
+      <img src="img/まち3.jpg" alt="看板">
+      <div class="photo-info">
+        <h3>温泉の看板</h3>
+        <p>色合いがかわいい</p>
+      </div>
+    </div>
+
+    <div class="photo-item">
+      <img src="img/まち4.jpg" alt="石畳の坂道">
+      <div class="photo-info">
+        <h3>鳥居</h3>
+        <p>鳥居と町並みがいい</p>
+      </div>
+    </div>
+    
+    <div class="photo-item">
+      <img src="img/まち5.jpg" alt="フグ料理">
+      <div class="photo-info">
+        <h3>壁</h3>
+        <p>空が青い</p>
+      </div>
+    </div>
+
+    <div class="photo-item">
+      <img src="img/まち6.jpg" alt="商店街">
+      <div class="photo-info">
+        <h3>名前を忘れた植物</h3>
+        <p>日光で光ってて綺麗</p>
+      </div>
+    </div>
+
+    <div class="photo-item">
+      <img src="img/まち7.jpg" alt="石畳の坂道">
+      <div class="photo-info">
+        <h3>看板めっちゃある家</h3>
+        <p>レトロな感じでかわいい</p>
+      </div>
+    </div>
+    
+    <div class="photo-item">
+      <img src="img/まち8.jpg" alt="フグ料理">
+      <div class="photo-info">
+        <h3>家と家の間</h3>
+        <p>こうゆうところいいよね</p>
+      </div>
+    </div>
+
+    <div class="photo-item">
+      <img src="img/まち9.jpg" alt="商店街">
+      <div class="photo-info">
+        <h3>バス</h3>
+        <p>通学で使ってみたい</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript：ランダム並び替え -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const gallery = document.querySelector('.photo-gallery');
+      const items = Array.from(gallery.children);
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+      }
+      items.forEach(item => gallery.appendChild(item));
+    });
+  </script>
+
+</body>
+</html>
