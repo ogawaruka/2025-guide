@@ -1,7 +1,7 @@
 const imageSets = {
-  mikan: ['img/食.jpg', 'img/みかん鍋.jpg', 'img/黄色いガードレール .jpg'],
-  kawara: ["img/瓦そば2.jpg" , "img/瓦そば.jpg" ],      // ← 1枚だけ
-  fugu: ['img/ふく.jpg' , 'img/フグ.jpg']      // ← 1枚だけ
+  mikan: ['sonota/shpku.jpg', 'sonota/nabe.jpg', 'sonota/kiro.jpg'],
+  kawara: ["soba/soba2.jpg" , "img/soba.jpg" ],      // ← 1枚だけ
+  fugu: ['sonota/fuku.jpg' , 'sonota/fugu.jpg']      // ← 1枚だけ
 };
 
 const currentIndices = {};
