@@ -1,5 +1,5 @@
 const imageSets = {
-  mikan: ['sonota/shpku.jpg', 'sonota/nabe.jpg', 'sonota/kiro.jpg'],
+  mikan: ['sonota/shoku.jpg', 'sonota/nabe.jpg', 'sonota/kiro.jpg'],
   kawara: ["soba/soba2.jpg" , "soba/soba.jpg" ],      // ← 1枚だけ
   fugu: ['sonota/fuku.jpg' , 'sonota/fugu.jpg']      // ← 1枚だけ
 };
